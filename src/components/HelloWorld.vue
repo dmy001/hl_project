@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>1111111111111111111</h1>
+    <button @click="btn1(3)">111</button>
+    <router-link :to="{ path: '/main' }">1111111111</router-link>
   </div>
 </template>
 
@@ -10,6 +12,18 @@ export default {
   props: {
     msg: String,
   },
+  data() {
+    return {};
+  },
+  methods: {
+    btn1(id) {
+      // this.$router.push("/login");
+      this.$router.push({
+        path: `/login/${id}`,
+      });
+    },
+  },
+  mounted: {},
 };
 </script>
 
