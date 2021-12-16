@@ -56,12 +56,15 @@ export default {
         })
         .then((res) => {
           console.log(res);
-          if (res.status === 200 && res.data.code === 200) {
+          // console.log(res.status);
+          // console.log(res.data.code);
+          if (res.status === 200 && res.data.code === 0) {
             window.localStorage.setItem("Token", res.data.data.token);
+            this.$router.push("/main");
+            // console.log(111);
           } else {
             this.$message.error("账号或密码错误，请重新登录");
           }
-          // return window;
         });
 
       // if (res.code === 0) {
