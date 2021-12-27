@@ -35,8 +35,8 @@ import axios from "axios";
 export default {
   data() {
     return {
-      username: "",
-      password: "",
+      username: "dmy01",
+      password: "123456",
     };
   },
   methods: {
